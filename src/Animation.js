@@ -119,13 +119,14 @@ const Animation = () => {
             easing: 'steps(7, end)',
             duration:1200,
             iterations:Infinity,
-            playbackRate:200000
+            playbackRate:1
+            
         }
 
     });
 
     const speed = ()=>{
-        console.log( + 'animation');
+        console.log(getAnimation().updatePlaybackRate(4) + 'animation');
     }
 
 
