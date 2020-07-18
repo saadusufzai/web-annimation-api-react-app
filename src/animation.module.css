@@ -5,6 +5,11 @@
     width: 100%;
 }
 
+.clouds{
+    width: 1800px;
+
+}
+
 .cloud1{
     
     position: absolute;
@@ -70,8 +75,8 @@
     z-index: 1;
     top: 33%;
     left: 30%;
-    width: 588px;
-    height: 544px;
+    width: 478px;
+    height: 435px;
 }
 
 .bandi{
