@@ -84,3 +84,8 @@
     z-index: 1;
     width: 105%;
 }
+
+.fighter{
+    position: absolute;
+    bottom: 0;
+}
