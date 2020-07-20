@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import classes from './animation.module.css'
 import clouds from './images/cloud.png'
 import road from './images/road.JPG'
@@ -125,14 +125,18 @@ const Animation = () => {
 
     });
     var frames = [q1,c1,c2,c3,c4,m1,m2,m3]
-
+    const [fighter, setFighter] = useState(1.0)
     const speed = ()=>{
+        setFighter(1.3)
          frames.forEach((e)=>e().updatePlaybackRate(e().playbackRate*1.3))
+         
     }
 
    const speedDown = ()=> {
     frames.forEach((e)=>e().updatePlaybackRate(e().playbackRate/1.3))
     }
+
+   
 
     return (
         
@@ -163,8 +167,8 @@ const Animation = () => {
             <img className={classes.road}  src={road}/>
             
             <button onClick={()=>speedDown()} >CLICK TO SLOW THEM DOWN</button>
-            <div className={classes.fighter} >
-                <Fighter/>
+            <div onClick={()=>speed()} className={classes.fighter} >
+                <Fighter fighterSpeed={fighter}/>
             </div>
 
 
